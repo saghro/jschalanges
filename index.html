@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+const students = [
+    {
+        name: 'John',
+        notes: [1, 20, 18, 19, 12]
+    },
+    {
+        name: 'Jane',
+        notes: [17, 18, 20, 13, 15]
+    },
+    {
+        name: 'Sophie',
+        notes: [17, 12, 14, 15, 13]
+    },
+    {
+        name: 'Marc',
+        notes: [2, 3, 5, 8, 9]
+    },
+    {
+        name: 'Manon',
+        notes: [18, 17, 18, 19, 12]
+    }
+]
+   
+  const moy = (notes) => {
+    let sum = 0 ;
+    for(let note of notes){
+       sum += note; }
+    return(sum)/notes.length;   
+  }
+  const compare=(a,b) => {
+    return b.moy - a.moy;
+  }
+  for ( let student of students){
+     student.moy = moy(student.notes)
+   }
+   const formaStudent = (student) =>{
+    return ` ${student.name} avec une moyenne ${student.moy}`
+   }
+   students.sort(compare)
+     console.log(`Top student 
+     1: ${formaStudent(students[0])}
+     2: ${formaStudent(students[1])}
+     3: ${formaStudent(students[2])}
+     
+     `)
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*function isPalindrome(str) {
+    const letters = str.split('');
+    const reversedStr = letters.reverse().join('');
+    return str.toLowerCase() === reversedStr.toLowerCase();
+}
+
+const words = {
+    kayak: true,
+    SOS: true,
+    Kayak: true,
+    Bonjour: false,
+};
+
+for (let word in words) {
+    if (isPalindrome(word) !== words[word]) {
+        console.error(`isPalindrome(${word}) a échoué`);
+    }
+}
+*/
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
