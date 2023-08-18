@@ -40,9 +40,11 @@ const students = [
   }
   for ( let student of students){
      student.moy = moy(student.notes)
+     student.worts = Math.min(...student.notes)
+     student.best = Math.max(...student.notes)
    }
    const formaStudent = (student) =>{
-    return ` ${student.name} avec une moyenne ${student.moy}`
+    return ` ${student.name} avec une moyenne ${student.moy } le max des notes est ${student.best} et le min est ${student.worts}`
    }
    students.sort(compare)
      console.log(`Top student 
@@ -51,39 +53,7 @@ const students = [
      3: ${formaStudent(students[2])}
      
      `)
-   
 
-
-
-
-
-
-
-
-
-
-
-
-
-            /*function isPalindrome(str) {
-    const letters = str.split('');
-    const reversedStr = letters.reverse().join('');
-    return str.toLowerCase() === reversedStr.toLowerCase();
-}
-
-const words = {
-    kayak: true,
-    SOS: true,
-    Kayak: true,
-    Bonjour: false,
-};
-
-for (let word in words) {
-    if (isPalindrome(word) !== words[word]) {
-        console.error(`isPalindrome(${word}) a échoué`);
-    }
-}
-*/
     </script>
 </head>
 <body>
