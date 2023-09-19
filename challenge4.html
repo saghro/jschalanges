@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        
+var categorie = prompt("Choisissez une catégorie de produits : RAM, PROC, ou Disque Dur").toUpperCase();
+
+var remise = 0;
+switch (categorie) {
+  case "RAM":
+    remise = 15;
+    break;
+  case "PROC":
+    remise = 25;
+    break;
+  case "DISQUE DUR":
+    remise = 30;
+    break;
+  default:
+    alert("Catégorie invalide");
+}
+
+// Afficher la remise accordée
+if (remise > 0) {
+  alert("Remise accordée pour la catégorie " + categorie + " : " + remise + "%");
+}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
