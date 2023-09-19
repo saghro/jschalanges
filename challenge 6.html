@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>challenge 6</title>
+    <script>
+       function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+         }
+         let nombreDeCoups = 0;
+         let sequenceTrouvee = false;
+         while (!sequenceTrouvee) {
+  
+           const nombre = getRandomInt(1, 100);
+  
+ 
+          if (nombre % 2 === 0) {
+   
+        nombreDeCoups++;
+    
+   
+    const nombreImpair1 = getRandomInt(1, 100);
+    const nombreImpair2 = getRandomInt(1, 100);
+    
+   
+    if (nombreImpair1 % 2 === 1 && nombreImpair2 % 2 === 1) {
+      
+      sequenceTrouvee = true;
+    }
+  } else {
+   
+    nombreDeCoups = 0;
+  }
+}
+
+
+console.log("Nombre de coups nécessaires pour obtenir la séquence : ", nombreDeCoups);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

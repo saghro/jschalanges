@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge5</title>
+    <script>
+       const nombreInitial = Math.floor(Math.random() * 900) + 100;
+       console.log("Le nombre initial est :", nombreInitial);
+
+
+        let nombreTire;
+        let nombreDeCoups = 0;
+
+         do {
+            nombreTire = Math.floor(Math.random() * 900) + 100;
+             nombreDeCoups++;
+             } while (nombreTire !== nombreInitial);
+
+
+            console.log("Nombre de coups nécessaires pour obtenir le nombre initial :", nombreDeCoups);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
