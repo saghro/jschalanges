@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chllenge 8</title>
+    <script>
+       function estNomValide(nom){
+        const regexNom = /^[A-Za-z]+$/;
+        return regexNom.test(nom);
+       }
+       function estMailValide(mail) {
+       const regexMail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+       return regexMail.test(mail);
+        }
+        function estCodeValide(code) {
+        const regexCode = /^\d{1,8}$/;
+        return regexCode.test(code);
+        }
+        function SaisieInfo(){
+            const nom = prompt("entez votre nom :");
+            const mail = prompt("Entrez votre adresse e-mail :");
+            const code = prompt("Entrez votre code :");
+
+            if (estNomValide(nom) && estMailValide(mail) && estCodeValide(code)) {
+            alert("Saisie valide !");
+            } else {
+             alert("Saisie invalide. Veuillez vérifier vos données.");
+           }
+        }
+        SaisieInfo();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
