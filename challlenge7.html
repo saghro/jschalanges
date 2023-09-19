@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challenge7</title>
+    <script>
+        function estPalindrome(chaine) {
+        
+            chaine = chaine.toLowerCase().replace(/\s/g, '');
+    
+            
+            const chaineInverse = chaine.split('').reverse().join('');
+            return chaine === chaineInverse;
+        }
+    
+        const chaineUtilisateur = prompt('Entrez une chaîne de caractères :');
+    
+        if (estPalindrome(chaineUtilisateur)) {
+            console.log('La chaîne est un palindrome.');
+        } else {
+            console.log('La chaîne n\'est pas un palindrome.');
+        }
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

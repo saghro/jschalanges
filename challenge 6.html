@@ -18,21 +18,19 @@
           if (nombre % 2 === 0) {
    
         nombreDeCoups++;
+          const nombreImpair1 = getRandomInt(1, 100);
+          const nombreImpair2 = getRandomInt(1, 100);
     
    
-    const nombreImpair1 = getRandomInt(1, 100);
-    const nombreImpair2 = getRandomInt(1, 100);
-    
-   
-    if (nombreImpair1 % 2 === 1 && nombreImpair2 % 2 === 1) {
+          if (nombreImpair1 % 2 === 1 && nombreImpair2 % 2 === 1) {
       
-      sequenceTrouvee = true;
-    }
-  } else {
+        sequenceTrouvee = true;
+       }
+       } else {
    
-    nombreDeCoups = 0;
-  }
-}
+       nombreDeCoups = 0;
+       }
+   }
 
 
 console.log("Nombre de coups nécessaires pour obtenir la séquence : ", nombreDeCoups);
