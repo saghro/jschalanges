@@ -10,14 +10,14 @@ function addPerson() {
     const age = parseInt(prompt("Entrez l'âge:"));
 
     if (nom && ville && !isNaN(age)) {
-        // Add the new person to the array
+       
         personnes.push([nom, ville, age]);
         
-        // Clear the existing table
+       
         const tableauHTML = document.getElementById("table");
         tableauHTML.innerHTML = "";
 
-        // Recreate and populate the table
+        
         const table = document.createElement("table");
         
         const thead = document.createElement("thead");
