@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function EstNomValid (name){
+            return /^[A-Za-z]+$/.test(name);
+
+        }
+        //const T = EstNomValid('imane1');
+        //console.log(T);
+        
+        function EstMailValid(mail){
+            return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(mail);
+        }
+        const T = EstMailValid('1imane1.kfrkdj.com');
+        console.log(T);
+        
+        function EstCodeValid(code){
+            return /^\d{1,8}$/.test(code);
+        }
+        name = prompt('Entrez votre Nom:');
+        if (EstNomValid  ){
+            mail = prompt('Entrez votre Mail:');
+            if(EstMailValid){
+                code = prompt('Entrez votre code:');
+                if (EstCodeValid  ){
+                    console.log('Nom valide :', name);
+                    console.log('Adresse mail valide :', mail);
+                    console.log('Code valide :', code);
+                }
+                else{alert('Le code doit contenir au max 8 chiffres.');}
+            }
+            else{ alert("Votre mail n'est pas valid.");}
+        }
+        else{alert('Le nom doit Contenir que des lettres.');}
+        
+
+</script>
+</body>
+</html>
