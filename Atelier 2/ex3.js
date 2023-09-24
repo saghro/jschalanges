@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const lastItem = itemList.lastElementChild;
         if (lastItem) {
             itemList.removeChild(lastItem);
+            
         }
     });
 });
