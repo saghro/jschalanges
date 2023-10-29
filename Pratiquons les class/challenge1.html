@@ -15,9 +15,16 @@
           get  perimetre (){
             return (this.width+this.height)*2;
           }
-          get
+          get isvalid(){
+            return this.height>0 && this.width>0;
+          }
        }  
-     
+     const r = new Rectangle(10,34)
+     console.log(r.perimetre);
+     console.log(r.isvalid)
+     const b = new Rectangle(-2 ,5)
+     console.log(b.perimetre)
+     console.log(b.isvalid)
     </script>
 </body>
 </html>
