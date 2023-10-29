@@ -19,12 +19,19 @@
             return this.height>0 && this.width>0;
           }
        }  
+       class Square extends Rectangle{
+        constructor(width){
+          super(width,width)
+       } }
      const r = new Rectangle(10,34)
      console.log(r.perimetre);
      console.log(r.isvalid)
      const b = new Rectangle(-2 ,5)
      console.log(b.perimetre)
      console.log(b.isvalid)
+     const c = new Square(10,2);
+      console.log(c.perimetre)
+      console.log(c.isvalid)
     </script>
 </body>
 </html>
