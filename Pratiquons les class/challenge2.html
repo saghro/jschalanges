@@ -7,6 +7,47 @@
 </head>
 <body>
     <script>
+     class Book {
+
+          #page = 1
+
+             constructor (title, pages) {
+                  this.title = title
+                this.pages = pages
+            }
+
+          get page () {
+        return this.#page
+        }
+
+        nextPage () {
+        if (this.#page < this.pages) {
+        this.#page++
+    }
+   }
+
+        close () {
+        this.#page = 1
+}
+}
+
+      class Library {
+
+         #books = []
+
+        addBook(book) {
+       this.#books.push(book)
+}
+
+        addBooks(books) {
+        books.forEach(this.addBook, this)
+}
+
+       findBooksByLetter(letter) {
+        return this.#books.filter((book) => book.title[0].toLowerCase() === letter.toLowerCase())
+}
+
+}
 
 
 
